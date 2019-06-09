@@ -27,9 +27,23 @@
                                     <constraint firstAttribute="width" constant="136" id="btl-Oq-ibB"/>
                                 </constraints>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="81r-Ex-pQz" appends="YES" id="fHI-VQ-cMf"/>
                                     <outletCollection property="gestureRecognizers" destination="cEK-SV-vLo" appends="YES" id="c7N-tk-gCm"/>
                                     <outletCollection property="gestureRecognizers" destination="hqN-DD-BZ3" appends="YES" id="IqV-s7-qWj"/>
+                                    <outletCollection property="gestureRecognizers" destination="Ldy-SN-dqb" appends="YES" id="eXc-Tf-WdI"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E46-Am-x6l">
+                                <rect key="frame" x="123.5" y="108" width="128" height="128"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="XFB-Fg-yoV"/>
+                                    <constraint firstAttribute="width" constant="128" id="j7a-0j-xUF"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="dVI-cD-cpy" appends="YES" id="r4S-3z-eZf"/>
+                                    <outletCollection property="gestureRecognizers" destination="SlK-5E-5f7" appends="YES" id="Ss5-zD-0VN"/>
+                                    <outletCollection property="gestureRecognizers" destination="RoP-DY-zsf" appends="YES" id="0dW-tl-vk0"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -38,19 +52,14 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NcG-4w-HZe" secondAttribute="bottom" constant="85" id="NGU-92-wFP"/>
                             <constraint firstItem="NcG-4w-HZe" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="SmL-74-sjo"/>
+                            <constraint firstItem="E46-Am-x6l" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="c1P-OU-MJk"/>
+                            <constraint firstItem="E46-Am-x6l" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="88" id="m5s-A5-pT6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="Ldy-SN-dqb" appends="YES" id="GaQ-CS-Bbz"/>
-                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer numberOfTapsRequired="2" numberOfTouchesRequired="2" id="81r-Ex-pQz">
-                    <connections>
-                        <action selector="tapAction:" destination="BYZ-38-t0r" id="u1b-ou-HYq"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" numberOfTouchesRequired="2" id="81r-Ex-pQz"/>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="cEK-SV-vLo">
                     <connections>
                         <action selector="panAction:" destination="BYZ-38-t0r" id="ZYa-rr-p20"/>
@@ -63,7 +72,23 @@
                 </rotationGestureRecognizer>
                 <pinchGestureRecognizer id="Ldy-SN-dqb">
                     <connections>
-                        <action selector="pinchAction:" destination="BYZ-38-t0r" id="cKU-hw-jak"/>
+                        <action selector="pinchAction:" destination="BYZ-38-t0r" id="lmb-LP-Egq"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="dVI-cD-cpy">
+                    <connections>
+                        <action selector="panAction:" destination="BYZ-38-t0r" id="bc4-Lt-7lk"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="xDZ-Vt-NKR"/>
+                    </connections>
+                </panGestureRecognizer>
+                <rotationGestureRecognizer id="SlK-5E-5f7">
+                    <connections>
+                        <action selector="rotationAction:" destination="BYZ-38-t0r" id="t5m-ya-dCf"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <pinchGestureRecognizer id="RoP-DY-zsf">
+                    <connections>
+                        <action selector="pinchAction:" destination="BYZ-38-t0r" id="15W-SA-zrT"/>
                     </connections>
                 </pinchGestureRecognizer>
             </objects>
